@@ -31,6 +31,7 @@ main{
 
 main img#logo{
     margin: 0 0 20px 80px;
+    padding: 30px;
 }
 
 section#container{
@@ -132,6 +133,12 @@ section#content-form fieldset input{
     background-color: #222;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 section#content-form button{
     width: 100%;
     height: 70px;
@@ -140,8 +147,58 @@ section#content-form button{
     border: none;
     border-radius: 5px;
     color: #C7C9CC;
+    cursor: pointer;
     background-color: #222;
 }
+
+#result-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0px 50px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+#result-container button{
+    width: 150%;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    color: #C7C9CC;
+    background-color: #222;
+    cursor: pointer;
+}
+
+#title-result h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 5px 0;
+}
+
+#title-result p{
+    padding: 5px 0;
+    color: #C7C9CC;
+    font-weight: 400;
+}
+
+
+#result{
+    display: flex;
+    gap: 50px;
+    color: #C58DE7;
+    font-size: 2rem;
+    margin: 40px auto;
+    border-radius: 5px;
+}
+
+
+
 
 /* Media Queries */
 
