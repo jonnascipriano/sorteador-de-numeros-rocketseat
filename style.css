@@ -22,8 +22,7 @@ body{
 }
 
 main{
-    width: 100vw;
-    height: 100vh;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,3 +88,8 @@ div.questions h3{
     color: #C58DE7;
 }
 
+@media (max-width: 970px) {
+    section#container{
+        flex-direction: column;
+    }
+}
