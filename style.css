@@ -161,6 +161,18 @@ section#content-form button{
     width: 80%;
     margin: 0 auto;
     padding: 50px 0;
-}
+    }
+
+    section#content header{
+        order: 0;
+    }
+
+    section#content-form{
+        order: 1;
+    }
+
+    div#questions-container{
+        order: 2;
+    }
 
 }
