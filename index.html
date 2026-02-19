@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Sorteador de Números</title>
+</head>
+<body>
+    <main>
+        <!-- Logo do site -->
+        <img id="logo" src="./img/logo.png" alt="">
+
+        <section id="container">
+            <!-- Conteúdo explicativo -->
+            <section id="content">
+
+                <!-- Header do conteúdo -->
+                <header>
+                    <p>Online - Gratuito</p>
+                    <h1>
+                        SORTEADOR DE NÚMEROS
+                    </h1>
+                </header>
+
+                <!-- Questionamentos da aplicação -->
+                <div id="questions-container">
+                    <div class="questions">
+                        <img src="./img/frame.png" alt="ícone de pergunta">
+                        <div>
+                            <h3>Como funciona o sorteador de números?</h3>
+                            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                        </div>
+                    </div>
+                    <div class="questions">
+                        <img src="./img/frame.png" alt="ícone de pergunta">
+                        <div>
+                            <h3>Posso escolher o intervalo dos números?</h3>
+                            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Formulário -->
+            <section id="content-form">
+                <!-- Título do formulário -->
+                <div id="title-form">
+                    <h2>Quero Sortear:</h2>
+                    <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                </div>
+
+                <!-- Formulário -->
+                <form>
+                    <!-- Configurações do sorteio -->
+                    <fieldset>
+                        <legend>NÚMEROS</legend>
+                        <input type="number" name="quantidade" id="quantidade">
+                    </fieldset>
+                    <fieldset>
+                        <legend>DE</legend>
+                        <input type="number" name="minimo" id="minimo">
+                    </fieldset>
+                    <fieldset>
+                        <legend>ATÉ</legend>
+                        <input type="number" name="maximo" id="maximo">
+                    </fieldset>
+                </form>
+                
+                <button>SORTEAR -></button>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
