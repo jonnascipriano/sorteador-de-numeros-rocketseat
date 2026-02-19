@@ -6,7 +6,7 @@
 
 body{
     width: 100vw;
-    height: 0vh;
+    height: 100vh;
 
     color: white;
 
@@ -27,7 +27,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 main img#logo{
@@ -38,6 +38,7 @@ section#container{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 section#content,
@@ -87,3 +88,4 @@ div.questions img{
 div.questions h3{
     color: #C58DE7;
 }
+
