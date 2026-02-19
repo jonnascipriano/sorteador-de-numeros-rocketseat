@@ -5,8 +5,6 @@
 }
 
 body{
-    width: 100vw;
-    height: 100vh;
 
     color: white;
 
@@ -22,15 +20,17 @@ body{
 }
 
 main{
-    width: 50vw;
+    width: 80vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    margin: 0 auto;
 }
 
 main img#logo{
-    margin-right: auto;
+    margin: 0 0 20px 80px;
 }
 
 section#container{
@@ -45,7 +45,6 @@ section#content-form{
     width: 40%;
     margin: 0 auto;
     padding: 20px;
-    
 }
 
 header{
@@ -54,7 +53,7 @@ header{
 }
 
 header h1{
-    font-size: 5rem;
+    font-size: 50px;
     text-transform: uppercase;
 }
 
@@ -88,8 +87,80 @@ div.questions h3{
     color: #C58DE7;
 }
 
+section#content-form{
+    display: flex;
+    flex-direction: column;
+}
+
+div#title-form h2{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+div#title-form p{  
+    padding: 10px 0; 
+    line-height: 22px;
+    color: #C7C9CC;
+}
+
+section#content-form form{
+    display: flex;
+    margin: 40px auto;
+}
+
+section#content-form fieldset{
+    border: none;
+    margin: 0 10px;
+    width: 100%;
+    color: #C7C9CC;
+    font-weight: 400;
+}
+
+section#content-form fieldset legend{
+    padding: 10px 0;
+}
+
+section#content-form fieldset input{
+    width: 100%;
+    height: 70px;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    color: aliceblue;
+    background-color: #222;
+}
+
+section#content-form button{
+    width: 100%;
+    height: 70px;
+    font-size: x-large;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    color: #C7C9CC;
+    background-color: #222;
+}
+
+/* Media Queries */
+
 @media (max-width: 970px) {
+
+    main {
+        width: 100%;
+        height: 100%;
+    }
+
     section#container{
         flex-direction: column;
     }
+
+    section#content,
+    section#content-form{
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
 }
