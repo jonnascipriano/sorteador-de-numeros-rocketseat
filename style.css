@@ -163,6 +163,10 @@ section#content-form button{
     text-transform: uppercase;
 }
 
+#result-container{
+    display: none;
+}
+
 #result-container button{
     width: 150%;
     height: 50px;

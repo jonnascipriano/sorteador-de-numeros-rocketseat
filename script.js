@@ -4,19 +4,25 @@ const quantidade = document.querySelector("#quantidade")
 const sectionContainer = document.querySelector('section#container')
 const sectionContentForm = document.querySelector('section#content-form')
 const buttonSortear = document.querySelector('section#content-form button')
-const buttonSortearNovamente = document.querySelector('section#result-container button')
 const htmlFormularioOriginal = sectionContentForm.innerHTML;
 
+const buttonSortearNovamente = document.querySelector('#sortear-novamente')
+const sectionResultContainer = document.querySelector('#result-container')
 
-
+let numerosSorteados = []
 function sortear(){
-        let numerosSorteados = []
     
+        numerosSorteados = []
         const valorMinimo = Number(numMinimo.value)
         const valorMaximo = Number(numMaximo.value)
         const quantidadeNumeros = Number(quantidade.value)
 
-        function qntResultados(quantidadeNumeros){
+        if(valorMinimo === ''|| valorMaximo === ''|| quantidadeNumeros === ''){
+            alert("Digite um número válido")
+            sectionResultContainer.style.display = 'none'
+            sectionContentForm.style.display = 'block'
+        } else {
+            function qntResultados(quantidadeNumeros){
             for(let i = 0; i < quantidadeNumeros; i++){
                 const result = Math.floor(Math.random() * (valorMaximo - valorMinimo + 1) + valorMinimo)
                 console.log(result)
@@ -35,36 +41,34 @@ function sortear(){
             htmlResultados += `<h3>${numerosSorteados[i]}</h3>`
         }
 
-        sectionContentForm.innerHTML = ''
-        sectionContainer.innerHTML += `<section id="result-container">
-                                            <div id="title-result">
+        sectionResultContainer.innerHTML = `<div id="title-result">
                                                 <h2>RESULTADO DO SORTEIO</h2>
                                                 <p>1º resultado</p>
                                             </div>
                                             <div id="result">
-                                                <h3>${htmlResultados}</h3>
+                                                ${htmlResultados}
                                             </div>
-                                            <button id="sortear-novamente" onclick="reiniciar()">SORTEAR NOVAMENTE</button>
-                                        </section>`
+                                            <button id="sortear-novamente" onclick="reiniciar()">SORTEAR NOVAMENTE</button>`
+        }
+
 }
+                                    
+                                    
+
 
 buttonSortear.addEventListener('click', (event) => {
     event.preventDefault()
+    sectionResultContainer.style.display = 'flex'
+    sectionContentForm.style.display = 'none';
     sortear()
 })
 
-function reiniciar() {
-    // 1. Limpa a área de resultados
-    sectionContainer.innerHTML = ''; 
 
-    // 2. Devolve o formulário original para a tela
-    sectionContentForm.innerHTML = htmlFormularioOriginal;
+window.reiniciar = function(){
+    sectionResultContainer.style.display = 'none'
+    sectionContentForm.style.display = 'block'
 
-    // 3. Limpa a lista de números para o próximo sorteio
-    numerosSorteados = [];
+    numMinimo.value = '';
+    numMaximo.value = '';
+    quantidade.value = '';
 }
-
-buttonSortearNovamente.addEventListener('click', (event) => {
-    event.preventDefault()
-    sortear()
-})
