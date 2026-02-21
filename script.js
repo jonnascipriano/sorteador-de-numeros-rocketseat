@@ -22,9 +22,8 @@ function sortear(){
             sectionResultContainer.style.display = 'none'
             sectionContentForm.style.display = 'block'
         } else if (quantidadeNumeros > valorMaximo - valorMinimo){
-alert("Digite um valor válido!")
-}
-else {
+            alert("Digite um valor válido!")
+        } else {
             function qntResultados(quantidadeNumeros){
             for(let i = 0; i < quantidadeNumeros; i++){
                 const result = Math.floor(Math.random() * (valorMaximo - valorMinimo + 1) + valorMinimo)
